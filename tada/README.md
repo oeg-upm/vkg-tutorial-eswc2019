@@ -1,5 +1,5 @@
 
-#TADA-entity
+# TADA-entity
 TADA stands for: TAbular Data Annotation
 
 It is a platform to automatically annotate entity columns of tabular data using a given knowledge graph. 
