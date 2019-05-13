@@ -1,0 +1,9 @@
+version: "1.0"
+services:
+  morph-csv:
+    image: dchaves1/morph-csv:1.0
+    container_name: morphcsv
+    env_file:
+    volume:
+      - ./configs:/configs
+      - ./output:/morphcsv/output
