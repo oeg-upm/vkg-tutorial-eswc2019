@@ -13,7 +13,7 @@ Use CSVW annotations and RML FnO mappings to generate R2RML mappings and an enri
 git clone https://github.com/oeg-upm/vkg-tutorial-eswc2019
 cd vkg-tutorial-eswc2019/morph-csv
 docker-compose up
-docker exec -it morphcsv "morphcsv/run.sh -c configFile.json"
+docker exec -it morphcsv "morphcsv/run.sh configFile.json"
 cd output
 ```
 
