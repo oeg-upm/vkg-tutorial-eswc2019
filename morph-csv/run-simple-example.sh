@@ -1,1 +1,1 @@
-docker exec -it morphcsv /run.sh /configs/open-city-data.json
+docker exec -it morphcsv /run.sh /configs/simple-example.json
