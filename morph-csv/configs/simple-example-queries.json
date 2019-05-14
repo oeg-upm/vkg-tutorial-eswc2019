@@ -1,0 +1,16 @@
+{
+  "sources":[
+    {
+      "csvw":"https://raw.githubusercontent.com/oeg-upm/morph-csv/master/evaluation/motivating-example/mappings/motivating-example-annotations.csvw.json",
+      "yarrrml": "https://raw.githubusercontent.com/oeg-upm/morph-csv/master/evaluation/motivating-example/mappings/motivating-example.yml",
+      "db": "simpleExample",
+      "query": [
+      	"configs/simple-example-queries/query1.rq",
+  		  "configs/simple-example-queries/query2.rq",
+  		  "configs/simple-example-queries/query3.rq",
+  		  "configs/simple-example-queries/query4.rq",
+  		  "configs/simple-example-queries/query5.rq"
+      ]
+    }
+  ]
+}

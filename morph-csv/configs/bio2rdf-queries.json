@@ -1,0 +1,16 @@
+{
+  "sources":[
+    {
+      "csvw":"https://raw.githubusercontent.com/oeg-upm/morph-csv/master/evaluation/bio2rdf/mappings/bio2rdf.csvw.json",
+      "yarrrml": "https://raw.githubusercontent.com/oeg-upm/morph-csv/master/evaluation/bio2rdf/mappings/bio2rdf.yml",
+      "db": "bio2rdf",
+      "query":[
+      		"configs/bio2rdf-queries/query1.rq",
+      		"configs/bio2rdf-queries/query2.rq",
+      		"configs/bio2rdf-queries/query3.rq",
+      		"configs/bio2rdf-queries/query4.rq",
+      		"configs/bio2rdf-queries/query5.rq"
+      ]
+    }
+  ]
+}
