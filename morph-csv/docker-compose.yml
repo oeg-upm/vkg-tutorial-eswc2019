@@ -4,5 +4,5 @@ services:
     image: dchaves1/morph-csv:1.0
     container_name: morphcsv
     volumes:
-      - ./configs:/configs
+      - ./configs:/morphcsv/configs
       - ./output:/morphcsv/output
