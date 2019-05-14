@@ -1,1 +1,0 @@
-docker exec -it morphcsv /run.sh /configs/bio2rdf.json
