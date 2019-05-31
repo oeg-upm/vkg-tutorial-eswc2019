@@ -19,7 +19,7 @@ docker-compose up -d
 
 ## Examples:
 
-- Comments and persons: https://github.com/oeg-upm/morph-csv/tree/master/motivating-example
+- Comments and persons: https://github.com/oeg-upm/morph-csv/tree/master/evaluation/motivating-example
 - Linking Open City data: https://github.com/oeg-upm/morph-csv/tree/master/evaluation/open-city-data-validation
 - Virtual Bio2RDF: https://github.com/oeg-upm/morph-csv/tree/master/evaluation/bio2rdf
 - Performance over transport data (GTFS): https://github.com/oeg-upm/morph-csv/tree/master/evaluation/transport-performance
