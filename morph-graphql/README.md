@@ -3,7 +3,7 @@ Translate OBDA mappings (R2RML/RML) into GraphQL Resolvers
 
 ## EXAMPLE Starwars: Translating mappings online for Javascript and a set of CSV files (assuming that you have npm and node or docker installed)
 ### Dataset used in the examples
-![Diagram](https://raw.githubusercontent.com/oeg-upm/vkg-tutorial-eswc2019/master/morph-graphql/starwars/schema.png)
+![Diagram](https://raw.githubusercontent.com/oeg-upm/vkg-tutorial-eswc2019/master/morph-graphql/starwars/schema.png | width=100)
 - url: https://github.com/oeg-upm/vkg-tutorial-eswc2019/tree/master/morph-graphql/starwars
 
 ### The mappings used in the examples
