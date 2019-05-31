@@ -9,6 +9,8 @@ Translate OBDA mappings (R2RML/RML) into GraphQL Resolvers
 ### The mappings used in the examples
 - url: https://raw.githubusercontent.com/oeg-upm/morph-graphql/master/examples/starwars/mappings.ttl
 
+### Queries
+![](https://raw.githubusercontent.com/oeg-upm/vkg-tutorial-eswc2019/master/morph-graphql/starwars/queries.png)
 
 1. ```mkdir output```
 2. ```cd output```
