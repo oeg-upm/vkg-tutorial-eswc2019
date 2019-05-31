@@ -1,0 +1,248 @@
+{
+  "datasources" : [
+      {
+        "id" : "Table PanTHERIA",
+        "type" : "CsvDatasource",
+        "arguments" : [";"],
+        "refresh" : "22118400000",
+        "connector"  : {
+         "arguments" : ["./mappings/data/PanTHERIA.csv"],
+         "type" : "LocalFileConnector",
+        }
+      }
+  ],
+   "resource_rules" : [
+    { 
+      "id" : "PanTHERIA",
+      "datasource_ids" : ["Table PanTHERIA"],
+      "subject" : "http://localhost:8080/taxons/[lower(regexp_replace(escapeHtml4(stripAccents({MSW93_Binomial})), '\\s+', '_'))]",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://dbpedia.org/ontology/PanteriaSpecies",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#msw93_binomial", 
+               "object" : "{MSW93_Binomial}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#MSW93_Order", 
+               "object" : "{MSW93_Order}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#MSW93_Family", 
+               "object" : "{MSW93_Family}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#MSW93_Genus", 
+               "object" : "{MSW93_Genus}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#MSW93_Species", 
+               "object" : "{MSW93_Species}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#1-1_ActivityCycle", 
+               "object" : "{1-1_ActivityCycle}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#5-1_AdultBodyMass_g", 
+               "object" : "{5-1_AdultBodyMass_g}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#8-1_AdultForearmLen_mm", 
+               "object" : "{8-1_AdultForearmLen_mm}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#13-1_AdultHeadBodyLen_mm", 
+               "object" : "{13-1_AdultHeadBodyLen_mm}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#2-1_AgeatEyeOpening_d", 
+               "object" : "{2-1_AgeatEyeOpening_d}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#3-1_AgeatFirstBirth_d", 
+               "object" : "{3-1_AgeatFirstBirth_d}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#18-1_BasalMetRate_mLO2hr", 
+               "object" : "{18-1_BasalMetRate_mLO2hr}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#5-2_BasalMetRateMass_g", 
+               "object" : "{5-2_BasalMetRateMass_g}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#6-1_DietBreadth", 
+               "object" : "{6-1_DietBreadth}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#7-1_DispersalAge_d", 
+               "object" : "{7-1_DispersalAge_d}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#9-1_GestationLen_d", 
+               "object" : "{9-1_GestationLen_d}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#12-1_HabitatBreadth", 
+               "object" : "{12-1_HabitatBreadth}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#22-1_HomeRange_km2", 
+               "object" : "{22-1_HomeRange_km2}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#22-2_HomeRange_Indiv_km2", 
+               "object" : "{22-2_HomeRange_Indiv_km2}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#14-1_InterBirthInterval_d", 
+               "object" : "{14-1_InterBirthInterval_d}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#15-1_LitterSize", 
+               "object" : "{15-1_LitterSize}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#16-1_LittersPerYear", 
+               "object" : "{16-1_LittersPerYear}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#17-1_MaxLongevity_m", 
+               "object" : "{17-1_MaxLongevity_m}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#5-3_NeonateBodyMass_g", 
+               "object" : "{5-3_NeonateBodyMass_g}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#13-2_NeonateHeadBodyLen_mm", 
+               "object" : "{13-2_NeonateHeadBodyLen_mm}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#21-1_PopulationDensity_n/km2", 
+               "object" : "{21-1_PopulationDensity_n/km2}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#10-1_PopulationGrpSize", 
+               "object" : "{10-1_PopulationGrpSize}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#23-1_SexualMaturityAge_d", 
+               "object" : "{23-1_SexualMaturityAge_d}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#10-2_SocialGrpSize", 
+               "object" : "{10-2_SocialGrpSize}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#24-1_TeatNumber", 
+               "object" : "{24-1_TeatNumber}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#12-2_Terrestriality", 
+               "object" : "{12-2_Terrestriality}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#6-2_TrophicLevel", 
+               "object" : "{6-2_TrophicLevel}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#25-1_WeaningAge_d", 
+               "object" : "{25-1_WeaningAge_d}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#5-4_WeaningBodyMass_g", 
+               "object" : "{5-4_WeaningBodyMass_g}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#13-3_WeaningHeadBodyLen_mm", 
+               "object" : "{13-3_WeaningHeadBodyLen_mm}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#References", 
+               "object" : "{References}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#5-5_AdultBodyMass_g_EXT", 
+               "object" : "{5-5_AdultBodyMass_g_EXT}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#16-2_LittersPerYear_EXT", 
+               "object" : "{16-2_LittersPerYear_EXT}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#5-6_NeonateBodyMass_g_EXT", 
+               "object" : "{5-6_NeonateBodyMass_g_EXT}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#5-7_WeaningBodyMass_g_EXT", 
+               "object" : "{5-7_WeaningBodyMass_g_EXT}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#26-1_GR_Area_km2", 
+               "object" : "{26-1_GR_Area_km2}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#26-2_GR_MaxLat_dd", 
+               "object" : "{26-2_GR_MaxLat_dd}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#26-3_GR_MinLat_dd", 
+               "object" : "{26-3_GR_MinLat_dd}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#26-4_GR_MRLat_dd", 
+               "object" : "{26-4_GR_MRLat_dd}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#26-5_GR_MaxLong_dd", 
+               "object" : "{26-5_GR_MaxLong_dd}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#26-6_GR_MinLong_dd", 
+               "object" : "{26-6_GR_MinLong_dd}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#26-7_GR_MRLong_dd", 
+               "object" : "{26-7_GR_MRLong_dd}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#27-1_HuPopDen_Min_n/km2", 
+               "object" : "{27-1_HuPopDen_Min_n/km2}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#27-2_HuPopDen_Mean_n/km2", 
+               "object" : "{27-2_HuPopDen_Mean_n/km2}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#27-3_HuPopDen_5p_n/km2", 
+               "object" : "{27-3_HuPopDen_5p_n/km2}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#27-4_HuPopDen_Change", 
+               "object" : "{27-4_HuPopDen_Change}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#28-1_Precip_Mean_mm", 
+               "object" : "{28-1_Precip_Mean_mm}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#28-2_Temp_Mean_01degC", 
+               "object" : "{28-2_Temp_Mean_01degC}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#30-1_AET_Mean_mm", 
+               "object" : "{30-1_AET_Mean_mm}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#30-2_PET_Mean_mm", 
+               "object" : "{30-2_PET_Mean_mm}",
+               "is_literal" : "True" 
+            }          
+      ]
+    }
+  ]
+}

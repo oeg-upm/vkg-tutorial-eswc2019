@@ -1,0 +1,149 @@
+{
+  "datasources" : [
+      {
+        "id" : "STARS4ALL Photometers Metadata datasource",
+        "type" : "JsonDatasource",
+        "arguments" : ["$.[*]"],
+        "connector"  : {
+         "arguments" : ["http://api.stars4all.eu/photometers"],
+         "type" : "URLConnector",
+        }
+      }
+  ],
+   "resource_rules" : [
+    { 
+      "id" : "STARS4ALL Photometers metadata",
+      "datasource_ids" : ["STARS4ALL Photometers Metadata datasource"],
+      "subject" : "http://localhost:8080/stars4all/photometers/{$.name}",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/2003/01/geo/wgs84_pos#location", 
+               "object" : "http://localhost:8080/stars4all/photometers/{$.name}/location",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://schema.org/location", 
+               "object" : "http://localhost:8080/stars4all/locations/countries/[lower(regexp_replace(escapeHtml4(stripAccents({$.country})), '\\s+', '_'))]",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://schema.org/location", 
+               "object" : "http://localhost:8080/stars4all/locations/cities/[lower(regexp_replace(escapeHtml4(stripAccents({$.city})), '\\s+', '_'))]",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://schema.org/location", 
+               "object" : "http://localhost:8080/stars4all/locations/places/[lower(regexp_replace(escapeHtml4(stripAccents({$.place})), '\\s+', '_'))]",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "https://w3id.org/saref#hasManufacturer", 
+               "object" : "{$.mac}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2000/01/rdf-schema#comment", 
+               "object" : "Filters: {$.filters}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2000/01/rdf-schema#comment", 
+               "object" : "Zero Point: {$.zero_point}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2000/01/rdf-schema#comment", 
+               "object" : "Position: {$.mov_sta_position}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "https://w3id.org/saref#hasName", 
+               "object" : "{$.name}",
+               "is_literal" : "True" 
+            }
+      ]
+    }, { 
+      "id" : "STARS4ALL Locations metadata",
+      "datasource_ids" : ["STARS4ALL Photometers Metadata datasource"],
+      "subject" : "http://localhost:8080/stars4all/photometers/{$.name}/location",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://www.w3.org/2003/01/geo/wgs84_pos#Point",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.w3.org/2003/01/geo/wgs84_pos#lat", 
+               "object" : "{$.latitude}",
+               "datatype" : "http://www.w3.org/2001/XMLSchema#float",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2003/01/geo/wgs84_pos#long", 
+               "object" : "{$.longitude}",
+               "datatype" : "http://www.w3.org/2001/XMLSchema#float",
+               "is_literal" : "True" 
+            }
+      ]
+    } , { 
+      "id" : "STARS4ALL Places metadata",
+      "datasource_ids" : ["STARS4ALL Photometers Metadata datasource"],
+      "subject" : "http://localhost:8080/stars4all/locations/places/[lower(regexp_replace(escapeHtml4(stripAccents({$.place})), '\\s+', '_'))]",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://schema.org/Place",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://schema.org/name", 
+               "object" : "{$.place}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://schema.org/alternateName", 
+               "object" : "{$.location}",
+               "is_literal" : "True" 
+            }
+      ]
+    }, { 
+      "id" : "STARS4ALL Cities metadata",
+      "datasource_ids" : ["STARS4ALL Photometers Metadata datasource"],
+      "subject" : "http://localhost:8080/stars4all/locations/cities/[lower(regexp_replace(escapeHtml4(stripAccents({$.city})), '\\s+', '_'))]",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://schema.org/City",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://schema.org/name", 
+               "object" : "{$.city}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2000/01/rdf-schema#comment", 
+               "object" : "Local Timezone: {$.local_timezone}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://schema.org/containedInPlace", 
+               "object" : "http://localhost:8080/stars4all/locations/countries/[lower(regexp_replace(escapeHtml4(stripAccents({$.country})), '\\s+', '_'))]",
+               "is_literal" : "False" 
+            },{
+                "predicate" : "http://schema.org/containsSensor",
+                "object" : "http://localhost:8080/stars4all/photometers/{$.name}",
+                "is_literal" : "False"
+            }
+      ]
+    }, { 
+      "id" : "STARS4ALL Countries metadata",
+      "datasource_ids" : ["STARS4ALL Photometers Metadata datasource"],
+      "subject" : "http://localhost:8080/stars4all/locations/countries/[lower(regexp_replace(escapeHtml4(stripAccents({$.country})), '\\s+', '_'))]",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://schema.org/Country",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://schema.org/name", 
+               "object" : "{$.country}",
+               "is_literal" : "True" 
+            },{
+                "predicate" : "http://schema.org/containsPlace",
+                "object" : "http://localhost:8080/stars4all/locations/cities/[lower(regexp_replace(escapeHtml4(stripAccents({$.city})), '\\s+', '_'))]",
+                "is_literal" : "False"
+            },{
+                "predicate" : "http://schema.org/containsSensor",
+                "object" : "http://localhost:8080/stars4all/photometers/{$.name}",
+                "is_literal" : "False"
+            }
+      ]
+    }
+  ]
+}

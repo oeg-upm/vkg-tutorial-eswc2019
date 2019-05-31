@@ -1,0 +1,1128 @@
+{
+  "datasources" : [
+      {
+        "id" : "Taxons EOL Datasource 1",
+        "type" : "HtmlDatasource",
+        "arguments" : [".js-data-row"],
+        "refresh" : "86400000",
+        "connector"  : {
+         "arguments" : ["https://eol.org/pages/328682/data"],
+         "type" : "URLConnector",
+        }
+      },{
+        "id" : "Taxons EOL Datasource 2",
+        "type" : "HtmlDatasource",
+        "arguments" : [".js-data-row"],
+        "refresh" : "86400000",
+        "connector"  : {
+         "arguments" : ["https://eol.org/pages/328837/data"],
+         "type" : "URLConnector",
+        }
+      },{
+        "id" : "Taxons EOL Datasource 3",
+        "type" : "HtmlDatasource",
+        "arguments" : [".js-data-row"],
+        "refresh" : "86400000",
+        "connector"  : {
+         "arguments" : ["https://eol.org/pages/327955/data"],
+         "type" : "URLConnector",
+        }
+      },{
+        "id" : "Taxons EOL Datasource 4",
+        "type" : "HtmlDatasource",
+        "arguments" : [".js-data-row"],
+        "refresh" : "86400000",
+        "connector"  : {
+         "arguments" : ["https://eol.org/pages/328663/data"],
+         "type" : "URLConnector",
+        }
+      },{
+        "id" : "Taxons EOL Datasource 5",
+        "type" : "HtmlDatasource",
+        "arguments" : [".js-data-row"],
+        "refresh" : "86400000",
+        "connector"  : {
+         "arguments" : ["https://eol.org/pages/327253/data"],
+         "type" : "URLConnector",
+        }
+      },{
+        "id" : "Taxons EOL Datasource 6",
+        "type" : "HtmlDatasource",
+        "arguments" : [".js-data-row"],
+        "refresh" : "86400000",
+        "connector"  : {
+         "arguments" : ["https://eol.org/pages/327565/data"],
+         "type" : "URLConnector",
+        }
+      },{
+        "id" : "Taxons EOL Datasource 7",
+        "type" : "HtmlDatasource",
+        "arguments" : [".js-data-row"],
+        "refresh" : "86400000",
+        "connector"  : {
+         "arguments" : ["https://eol.org/pages/328109/data"],
+         "type" : "URLConnector",
+        }
+      },{
+        "id" : "Taxons EOL Datasource 8",
+        "type" : "HtmlDatasource",
+        "arguments" : [".js-data-row"],
+        "refresh" : "86400000",
+        "connector"  : {
+         "arguments" : ["https://eol.org/pages/1228387/data"],
+         "type" : "URLConnector",
+        }
+      },{
+        "id" : "Taxons EOL Datasource 9",
+        "type" : "HtmlDatasource",
+        "arguments" : [".js-data-row"],
+        "refresh" : "86400000",
+        "connector"  : {
+         "arguments" : ["https://eol.org/pages/328698/data"],
+         "type" : "URLConnector",
+        }
+      },{
+        "id" : "Taxons EOL Datasource 10",
+        "type" : "HtmlDatasource",
+        "arguments" : [".js-data-row"],
+        "refresh" : "86400000",
+        "connector"  : {
+         "arguments" : ["https://eol.org/pages/327247/data"],
+         "type" : "URLConnector",
+        }
+      },{
+        "id" : "Taxons EOL Datasource 11",
+        "type" : "HtmlDatasource",
+        "arguments" : [".js-data-row"],
+        "refresh" : "86400000",
+        "connector"  : {
+         "arguments" : ["https://eol.org/pages/328608/data"],
+         "type" : "URLConnector",
+        }
+      },{
+        "id" : "Taxons EOL Datasource 12",
+        "type" : "HtmlDatasource",
+        "arguments" : [".js-data-row"],
+        "refresh" : "86400000",
+        "connector"  : {
+         "arguments" : ["https://eol.org/pages/311906/data"],
+         "type" : "URLConnector",
+        }
+      },{
+        "id" : "Taxons EOL Datasource 13",
+        "type" : "HtmlDatasource",
+        "arguments" : [".js-data-row"],
+        "refresh" : "86400000",
+        "connector"  : {
+         "arguments" : ["https://eol.org/pages/327551/data"],
+         "type" : "URLConnector",
+        }
+      },{
+        "id" : "Taxons EOL Datasource 14",
+        "type" : "HtmlDatasource",
+        "arguments" : [".js-data-row"],
+        "refresh" : "86400000",
+        "connector"  : {
+         "arguments" : ["https://eol.org/pages/327359/data"],
+         "type" : "URLConnector",
+        }
+      },{
+        "id" : "Taxons EOL Datasource 15",
+        "type" : "HtmlDatasource",
+        "arguments" : [".js-data-row"],
+        "refresh" : "86400000",
+        "connector"  : {
+         "arguments" : ["https://eol.org/pages/327954/data"],
+         "type" : "URLConnector",
+        }
+      },{
+        "id" : "Taxons EOL Datasource 16",
+        "type" : "HtmlDatasource",
+        "arguments" : [".js-data-row"],
+        "refresh" : "86400000",
+        "connector"  : {
+         "arguments" : ["https://eol.org/pages/327607/data"],
+         "type" : "URLConnector",
+        }
+      },{
+        "id" : "Taxons EOL Datasource 17",
+        "type" : "HtmlDatasource",
+        "arguments" : [".js-data-row"],
+        "refresh" : "86400000",
+        "connector"  : {
+         "arguments" : ["https://eol.org/pages/1038792/data"],
+         "type" : "URLConnector",
+        }
+      },{
+        "id" : "Taxons EOL Datasource 18",
+        "type" : "HtmlDatasource",
+        "arguments" : [".js-data-row"],
+        "refresh" : "86400000",
+        "connector"  : {
+         "arguments" : ["https://eol.org/pages/328092/data"],
+         "type" : "URLConnector",
+        }
+      },{
+        "id" : "Taxons EOL Datasource 19",
+        "type" : "HtmlDatasource",
+        "arguments" : [".js-data-row"],
+        "refresh" : "86400000",
+        "connector"  : {
+         "arguments" : ["https://eol.org/pages/328609/data"],
+         "type" : "URLConnector",
+        }
+      },{
+        "id" : "Taxons EOL Datasource 20",
+        "type" : "HtmlDatasource",
+        "arguments" : [".js-data-row"],
+        "refresh" : "86400000",
+        "connector"  : {
+         "arguments" : ["https://eol.org/pages/327567/data"],
+         "type" : "URLConnector",
+        }
+      },{
+        "id" : "Taxons EOL Datasource 21",
+        "type" : "HtmlDatasource",
+        "arguments" : [".js-data-row"],
+        "refresh" : "86400000",
+        "connector"  : {
+         "arguments" : ["https://eol.org/pages/327250/data"],
+         "type" : "URLConnector",
+        }
+      },{
+        "id" : "Taxons EOL Datasource 22",
+        "type" : "HtmlDatasource",
+        "arguments" : [".js-data-row"],
+        "refresh" : "86400000",
+        "connector"  : {
+         "arguments" : ["https://eol.org/pages/327951/data"],
+         "type" : "URLConnector",
+        }
+      },{
+        "id" : "Taxons EOL Datasource 23",
+        "type" : "HtmlDatasource",
+        "arguments" : [".js-data-row"],
+        "refresh" : "86400000",
+        "connector"  : {
+         "arguments" : ["https://eol.org/pages/328699/data"],
+         "type" : "URLConnector",
+        }
+      },{
+        "id" : "Taxons EOL Datasource 24",
+        "type" : "HtmlDatasource",
+        "arguments" : [".js-data-row"],
+        "refresh" : "86400000",
+        "connector"  : {
+         "arguments" : ["https://eol.org/pages/328685/data"],
+         "type" : "URLConnector",
+        }
+      },{
+        "id" : "Taxons EOL Datasource 25",
+        "type" : "HtmlDatasource",
+        "arguments" : [".js-data-row"],
+        "refresh" : "86400000",
+        "connector"  : {
+         "arguments" : ["https://eol.org/pages/326843/data"],
+         "type" : "URLConnector",
+        }
+      },{
+        "id" : "Taxons EOL Datasource 26",
+        "type" : "HtmlDatasource",
+        "arguments" : [".js-data-row"],
+        "refresh" : "86400000",
+        "connector"  : {
+         "arguments" : ["https://eol.org/pages/328611/data"],
+         "type" : "URLConnector",
+        }
+      },{
+        "id" : "Taxons EOL Datasource 27",
+        "type" : "HtmlDatasource",
+        "arguments" : [".js-data-row"],
+        "refresh" : "86400000",
+        "connector"  : {
+         "arguments" : ["https://eol.org/pages/289588/data"],
+         "type" : "URLConnector",
+        }
+      },{
+        "id" : "Taxons EOL Datasource 28",
+        "type" : "HtmlDatasource",
+        "arguments" : [".js-data-row"],
+        "refresh" : "86400000",
+        "connector"  : {
+         "arguments" : ["https://eol.org/pages/313989/data"],
+         "type" : "URLConnector",
+        }
+      },{
+        "id" : "Taxons EOL Datasource 29",
+        "type" : "HtmlDatasource",
+        "arguments" : [".js-data-row"],
+        "refresh" : "86400000",
+        "connector"  : {
+         "arguments" : ["https://eol.org/pages/327563/data"],
+         "type" : "URLConnector",
+        }
+      },{
+        "id" : "Taxons EOL Datasource 30",
+        "type" : "HtmlDatasource",
+        "arguments" : [".js-data-row"],
+        "refresh" : "86400000",
+        "connector"  : {
+         "arguments" : ["https://eol.org/pages/327564/data"],
+         "type" : "URLConnector",
+        }
+      },{
+        "id" : "Taxons EOL Datasource 31",
+        "type" : "HtmlDatasource",
+        "arguments" : [".js-data-row"],
+        "refresh" : "86400000",
+        "connector"  : {
+         "arguments" : ["https://eol.org/pages/328648/data"],
+         "type" : "URLConnector",
+        }
+      },{
+        "id" : "Taxons EOL Datasource 32",
+        "type" : "HtmlDatasource",
+        "arguments" : [".js-data-row"],
+        "refresh" : "86400000",
+        "connector"  : {
+         "arguments" : ["https://eol.org/pages/328598/data"],
+         "type" : "URLConnector",
+        }
+      },{
+        "id" : "Taxons EOL Datasource 33",
+        "type" : "HtmlDatasource",
+        "arguments" : [".js-data-row"],
+        "refresh" : "86400000",
+        "connector"  : {
+         "arguments" : ["https://eol.org/pages/323890/data"],
+         "type" : "URLConnector",
+        }
+      },{
+        "id" : "Taxons EOL Datasource 34",
+        "type" : "HtmlDatasource",
+        "arguments" : [".js-data-row"],
+        "refresh" : "86400000",
+        "connector"  : {
+         "arguments" : ["https://eol.org/pages/327553/data"],
+         "type" : "URLConnector",
+        }
+      },{
+        "id" : "Taxons EOL Datasource 35",
+        "type" : "HtmlDatasource",
+        "arguments" : [".js-data-row"],
+        "refresh" : "86400000",
+        "connector"  : {
+         "arguments" : ["https://eol.org/pages/328684/data"],
+         "type" : "URLConnector",
+        }
+      },{
+        "id" : "Taxons EOL Datasource 36",
+        "type" : "HtmlDatasource",
+        "arguments" : [".js-data-row"],
+        "refresh" : "86400000",
+        "connector"  : {
+         "arguments" : ["https://eol.org/pages/327645/data"],
+         "type" : "URLConnector",
+        }
+      },{
+        "id" : "Taxons EOL Datasource 37",
+        "type" : "HtmlDatasource",
+        "arguments" : [".js-data-row"],
+        "refresh" : "86400000",
+        "connector"  : {
+         "arguments" : ["https://eol.org/pages/327566/data"],
+         "type" : "URLConnector",
+        }
+      },{
+        "id" : "Taxons EOL Datasource 38",
+        "type" : "HtmlDatasource",
+        "arguments" : [".js-data-row"],
+        "refresh" : "86400000",
+        "connector"  : {
+         "arguments" : ["https://eol.org/pages/328032/data"],
+         "type" : "URLConnector",
+        }
+      },{
+        "id" : "Taxons EOL Datasource 39",
+        "type" : "HtmlDatasource",
+        "arguments" : [".js-data-row"],
+        "refresh" : "86400000",
+        "connector"  : {
+         "arguments" : ["https://eol.org/pages/327556/data"],
+         "type" : "URLConnector",
+        }
+      },{
+        "id" : "Taxons EOL Datasource 42",
+        "type" : "HtmlDatasource",
+        "arguments" : [".js-data-row"],
+        "refresh" : "86400000",
+        "connector"  : {
+         "arguments" : ["https://eol.org/pages/328593/data"],
+         "type" : "URLConnector",
+        }
+      }
+  ],
+   "resource_rules" : [
+    { 
+      "id" : "EOL Taxons 3",
+      "datasource_ids" : ["Taxons EOL Datasource 3"],
+      "subject" : "http://localhost:8080/taxons/eol/measure/327955",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://www.oeg.com/ontology#Measure",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#[lower(regexp_replace(escapeHtml4(stripAccents({.trait-pred})), '\\s+', '_'))]", 
+               "object" : "[trim(regexp_replace(regexp_replace(regexp_replace({.trait-val},'^<div[^>]+>',''),'<.*',''),'\\n\\s?',''))]",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2002/07/owl#someValuesFrom",
+               "object" : "https://eol.org/pages/327955",
+               "is_literal" : "False"
+            }
+      ]
+    },{ 
+      "id" : "EOL Taxons 4",
+      "datasource_ids" : ["Taxons EOL Datasource 4"],
+      "subject" : "http://localhost:8080/taxons/eol/measure/328663",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://www.oeg.com/ontology#Measure",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#[lower(regexp_replace(escapeHtml4(stripAccents({.trait-pred})), '\\s+', '_'))]", 
+               "object" : "[trim(regexp_replace(regexp_replace(regexp_replace({.trait-val},'^<div[^>]+>',''),'<.*',''),'\\n\\s?',''))]",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2002/07/owl#someValuesFrom",
+               "object" : "https://eol.org/pages/328663",
+               "is_literal" : "False"
+            }
+      ]
+    },{ 
+      "id" : "EOL Taxons 5",
+      "datasource_ids" : ["Taxons EOL Datasource 5"],
+      "subject" : "http://localhost:8080/taxons/eol/measure/327253",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://www.oeg.com/ontology#Measure",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#[lower(regexp_replace(escapeHtml4(stripAccents({.trait-pred})), '\\s+', '_'))]", 
+               "object" : "[trim(regexp_replace(regexp_replace(regexp_replace({.trait-val},'^<div[^>]+>',''),'<.*',''),'\\n\\s?',''))]",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2002/07/owl#someValuesFrom",
+               "object" : "https://eol.org/pages/327253",
+               "is_literal" : "False"
+            }
+      ]
+    },{ 
+      "id" : "EOL Taxons 1",
+      "datasource_ids" : ["Taxons EOL Datasource 1"],
+      "subject" : "http://localhost:8080/taxons/eol/measure/328682",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://www.oeg.com/ontology#Measure",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#[lower(regexp_replace(escapeHtml4(stripAccents({.trait-pred})), '\\s+', '_'))]", 
+               "object" : "[trim(regexp_replace(regexp_replace(regexp_replace({.trait-val},'^<div[^>]+>',''),'<.*',''),'\\n\\s?',''))]",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2002/07/owl#someValuesFrom",
+               "object" : "https://eol.org/pages/328682",
+               "is_literal" : "False"
+            }
+      ]
+    },{ 
+      "id" : "EOL Taxons 2",
+      "datasource_ids" : ["Taxons EOL Datasource 2"],
+      "subject" : "http://localhost:8080/taxons/eol/measure/328837",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://www.oeg.com/ontology#Measure",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#[lower(regexp_replace(escapeHtml4(stripAccents({.trait-pred})), '\\s+', '_'))]", 
+               "object" : "[trim(regexp_replace(regexp_replace(regexp_replace({.trait-val},'^<div[^>]+>',''),'<.*',''),'\\n\\s?',''))]",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2002/07/owl#someValuesFrom",
+               "object" : "https://eol.org/pages/328837",
+               "is_literal" : "False"
+            }
+      ]
+    },{ 
+      "id" : "EOL Taxons 6",
+      "datasource_ids" : ["Taxons EOL Datasource 6"],
+      "subject" : "http://localhost:8080/taxons/eol/measure/327565",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://www.oeg.com/ontology#Measure",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#[lower(regexp_replace(escapeHtml4(stripAccents({.trait-pred})), '\\s+', '_'))]", 
+               "object" : "[trim(regexp_replace(regexp_replace(regexp_replace({.trait-val},'^<div[^>]+>',''),'<.*',''),'\\n\\s?',''))]",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2002/07/owl#someValuesFrom",
+               "object" : "https://eol.org/pages/327565",
+               "is_literal" : "False"
+            }
+      ]
+    },{ 
+      "id" : "EOL Taxons 7",
+      "datasource_ids" : ["Taxons EOL Datasource 7"],
+      "subject" : "http://localhost:8080/taxons/eol/measure/328109",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://www.oeg.com/ontology#Measure",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#[lower(regexp_replace(escapeHtml4(stripAccents({.trait-pred})), '\\s+', '_'))]", 
+               "object" : "[trim(regexp_replace(regexp_replace(regexp_replace({.trait-val},'^<div[^>]+>',''),'<.*',''),'\\n\\s?',''))]",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2002/07/owl#someValuesFrom",
+               "object" : "https://eol.org/pages/328109",
+               "is_literal" : "False"
+            }
+      ]
+    },{ 
+      "id" : "EOL Taxons 8",
+      "datasource_ids" : ["Taxons EOL Datasource 8"],
+      "subject" : "http://localhost:8080/taxons/eol/measure/1228387",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://www.oeg.com/ontology#Measure",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#[lower(regexp_replace(escapeHtml4(stripAccents({.trait-pred})), '\\s+', '_'))]", 
+               "object" : "[trim(regexp_replace(regexp_replace(regexp_replace({.trait-val},'^<div[^>]+>',''),'<.*',''),'\\n\\s?',''))]",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2002/07/owl#someValuesFrom",
+               "object" : "https://eol.org/pages/1228387",
+               "is_literal" : "False"
+            }
+      ]
+    },{ 
+      "id" : "EOL Taxons 9",
+      "datasource_ids" : ["Taxons EOL Datasource 9"],
+      "subject" : "http://localhost:8080/taxons/eol/measure/328698",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://www.oeg.com/ontology#Measure",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#[lower(regexp_replace(escapeHtml4(stripAccents({.trait-pred})), '\\s+', '_'))]", 
+               "object" : "[trim(regexp_replace(regexp_replace(regexp_replace({.trait-val},'^<div[^>]+>',''),'<.*',''),'\\n\\s?',''))]",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2002/07/owl#someValuesFrom",
+               "object" : "https://eol.org/pages/328698",
+               "is_literal" : "False"
+            }
+      ]
+    },{ 
+      "id" : "EOL Taxons 10",
+      "datasource_ids" : ["Taxons EOL Datasource 10"],
+      "subject" : "http://localhost:8080/taxons/eol/measure/327247",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://www.oeg.com/ontology#Measure",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#[lower(regexp_replace(escapeHtml4(stripAccents({.trait-pred})), '\\s+', '_'))]", 
+               "object" : "[trim(regexp_replace(regexp_replace(regexp_replace({.trait-val},'^<div[^>]+>',''),'<.*',''),'\\n\\s?',''))]",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2002/07/owl#someValuesFrom",
+               "object" : "https://eol.org/pages/327247",
+               "is_literal" : "False"
+            }
+      ]
+    },{ 
+      "id" : "EOL Taxons 11",
+      "datasource_ids" : ["Taxons EOL Datasource 11"],
+      "subject" : "http://localhost:8080/taxons/eol/measure/328608",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://www.oeg.com/ontology#Measure",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#[lower(regexp_replace(escapeHtml4(stripAccents({.trait-pred})), '\\s+', '_'))]", 
+               "object" : "[trim(regexp_replace(regexp_replace(regexp_replace({.trait-val},'^<div[^>]+>',''),'<.*',''),'\\n\\s?',''))]",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2002/07/owl#someValuesFrom",
+               "object" : "https://eol.org/pages/328608",
+               "is_literal" : "False"
+            }
+      ]
+    },{ 
+      "id" : "EOL Taxons 12",
+      "datasource_ids" : ["Taxons EOL Datasource 12"],
+      "subject" : "http://localhost:8080/taxons/eol/measure/311906",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://www.oeg.com/ontology#Measure",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#[lower(regexp_replace(escapeHtml4(stripAccents({.trait-pred})), '\\s+', '_'))]", 
+               "object" : "[trim(regexp_replace(regexp_replace(regexp_replace({.trait-val},'^<div[^>]+>',''),'<.*',''),'\\n\\s?',''))]",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2002/07/owl#someValuesFrom",
+               "object" : "https://eol.org/pages/311906",
+               "is_literal" : "False"
+            }
+      ]
+    },{ 
+      "id" : "EOL Taxons 13",
+      "datasource_ids" : ["Taxons EOL Datasource 13"],
+      "subject" : "http://localhost:8080/taxons/eol/measure/327551",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://www.oeg.com/ontology#Measure",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#[lower(regexp_replace(escapeHtml4(stripAccents({.trait-pred})), '\\s+', '_'))]", 
+               "object" : "[trim(regexp_replace(regexp_replace(regexp_replace({.trait-val},'^<div[^>]+>',''),'<.*',''),'\\n\\s?',''))]",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2002/07/owl#someValuesFrom",
+               "object" : "https://eol.org/pages/327551",
+               "is_literal" : "False"
+            }
+      ]
+    },{ 
+      "id" : "EOL Taxons 14",
+      "datasource_ids" : ["Taxons EOL Datasource 14"],
+      "subject" : "http://localhost:8080/taxons/eol/measure/327359",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://www.oeg.com/ontology#Measure",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#[lower(regexp_replace(escapeHtml4(stripAccents({.trait-pred})), '\\s+', '_'))]", 
+               "object" : "[trim(regexp_replace(regexp_replace(regexp_replace({.trait-val},'^<div[^>]+>',''),'<.*',''),'\\n\\s?',''))]",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2002/07/owl#someValuesFrom",
+               "object" : "https://eol.org/pages/327359",
+               "is_literal" : "False"
+            }
+      ]
+    },{ 
+      "id" : "EOL Taxons 15",
+      "datasource_ids" : ["Taxons EOL Datasource 15"],
+      "subject" : "http://localhost:8080/taxons/eol/measure/327954",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://www.oeg.com/ontology#Measure",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#[lower(regexp_replace(escapeHtml4(stripAccents({.trait-pred})), '\\s+', '_'))]", 
+               "object" : "[trim(regexp_replace(regexp_replace(regexp_replace({.trait-val},'^<div[^>]+>',''),'<.*',''),'\\n\\s?',''))]",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2002/07/owl#someValuesFrom",
+               "object" : "https://eol.org/pages/327954",
+               "is_literal" : "False"
+            }
+      ]
+    },{ 
+      "id" : "EOL Taxons 16",
+      "datasource_ids" : ["Taxons EOL Datasource 16"],
+      "subject" : "http://localhost:8080/taxons/eol/measure/327607",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://www.oeg.com/ontology#Measure",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#[lower(regexp_replace(escapeHtml4(stripAccents({.trait-pred})), '\\s+', '_'))]", 
+               "object" : "[trim(regexp_replace(regexp_replace(regexp_replace({.trait-val},'^<div[^>]+>',''),'<.*',''),'\\n\\s?',''))]",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2002/07/owl#someValuesFrom",
+               "object" : "https://eol.org/pages/327607",
+               "is_literal" : "False"
+            }
+      ]
+    },{ 
+      "id" : "EOL Taxons 17",
+      "datasource_ids" : ["Taxons EOL Datasource 17"],
+      "subject" : "http://localhost:8080/taxons/eol/measure/1038792",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://www.oeg.com/ontology#Measure",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#[lower(regexp_replace(escapeHtml4(stripAccents({.trait-pred})), '\\s+', '_'))]", 
+               "object" : "[trim(regexp_replace(regexp_replace(regexp_replace({.trait-val},'^<div[^>]+>',''),'<.*',''),'\\n\\s?',''))]",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2002/07/owl#someValuesFrom",
+               "object" : "https://eol.org/pages/1038792",
+               "is_literal" : "False"
+            }
+      ]
+    },{ 
+      "id" : "EOL Taxons 18",
+      "datasource_ids" : ["Taxons EOL Datasource 18"],
+      "subject" : "http://localhost:8080/taxons/eol/measure/328092",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://www.oeg.com/ontology#Measure",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#[lower(regexp_replace(escapeHtml4(stripAccents({.trait-pred})), '\\s+', '_'))]", 
+               "object" : "[trim(regexp_replace(regexp_replace(regexp_replace({.trait-val},'^<div[^>]+>',''),'<.*',''),'\\n\\s?',''))]",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2002/07/owl#someValuesFrom",
+               "object" : "https://eol.org/pages/328092",
+               "is_literal" : "False"
+            }
+      ]
+    },{ 
+      "id" : "EOL Taxons 19",
+      "datasource_ids" : ["Taxons EOL Datasource 19"],
+      "subject" : "http://localhost:8080/taxons/eol/measure/328609",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://www.oeg.com/ontology#Measure",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#[lower(regexp_replace(escapeHtml4(stripAccents({.trait-pred})), '\\s+', '_'))]", 
+               "object" : "[trim(regexp_replace(regexp_replace(regexp_replace({.trait-val},'^<div[^>]+>',''),'<.*',''),'\\n\\s?',''))]",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2002/07/owl#someValuesFrom",
+               "object" : "https://eol.org/pages/328609",
+               "is_literal" : "False"
+            }
+      ]
+    },{ 
+      "id" : "EOL Taxons 20",
+      "datasource_ids" : ["Taxons EOL Datasource 20"],
+      "subject" : "http://localhost:8080/taxons/eol/measure/327567",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://www.oeg.com/ontology#Measure",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#[lower(regexp_replace(escapeHtml4(stripAccents({.trait-pred})), '\\s+', '_'))]", 
+               "object" : "[trim(regexp_replace(regexp_replace(regexp_replace({.trait-val},'^<div[^>]+>',''),'<.*',''),'\\n\\s?',''))]",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2002/07/owl#someValuesFrom",
+               "object" : "https://eol.org/pages/327567",
+               "is_literal" : "False"
+            }
+      ]
+    },{ 
+      "id" : "EOL Taxons 21",
+      "datasource_ids" : ["Taxons EOL Datasource 21"],
+      "subject" : "http://localhost:8080/taxons/eol/measure/327250",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://www.oeg.com/ontology#Measure",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#[lower(regexp_replace(escapeHtml4(stripAccents({.trait-pred})), '\\s+', '_'))]", 
+               "object" : "[trim(regexp_replace(regexp_replace(regexp_replace({.trait-val},'^<div[^>]+>',''),'<.*',''),'\\n\\s?',''))]",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2002/07/owl#someValuesFrom",
+               "object" : "https://eol.org/pages/327250",
+               "is_literal" : "False"
+            }
+      ]
+    },{ 
+      "id" : "EOL Taxons 22",
+      "datasource_ids" : ["Taxons EOL Datasource 22"],
+      "subject" : "http://localhost:8080/taxons/eol/measure/327951",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://www.oeg.com/ontology#Measure",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#[lower(regexp_replace(escapeHtml4(stripAccents({.trait-pred})), '\\s+', '_'))]", 
+               "object" : "[trim(regexp_replace(regexp_replace(regexp_replace({.trait-val},'^<div[^>]+>',''),'<.*',''),'\\n\\s?',''))]",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2002/07/owl#someValuesFrom",
+               "object" : "https://eol.org/pages/327951",
+               "is_literal" : "False"
+            }
+      ]
+    },{ 
+      "id" : "EOL Taxons 23",
+      "datasource_ids" : ["Taxons EOL Datasource 23"],
+      "subject" : "http://localhost:8080/taxons/eol/measure/328699",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://www.oeg.com/ontology#Measure",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#[lower(regexp_replace(escapeHtml4(stripAccents({.trait-pred})), '\\s+', '_'))]", 
+               "object" : "[trim(regexp_replace(regexp_replace(regexp_replace({.trait-val},'^<div[^>]+>',''),'<.*',''),'\\n\\s?',''))]",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2002/07/owl#someValuesFrom",
+               "object" : "https://eol.org/pages/328699",
+               "is_literal" : "False"
+            }
+      ]
+    },{ 
+      "id" : "EOL Taxons 24",
+      "datasource_ids" : ["Taxons EOL Datasource 24"],
+      "subject" : "http://localhost:8080/taxons/eol/measure/328685",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://www.oeg.com/ontology#Measure",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#[lower(regexp_replace(escapeHtml4(stripAccents({.trait-pred})), '\\s+', '_'))]", 
+               "object" : "[trim(regexp_replace(regexp_replace(regexp_replace({.trait-val},'^<div[^>]+>',''),'<.*',''),'\\n\\s?',''))]",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2002/07/owl#someValuesFrom",
+               "object" : "https://eol.org/pages/328685",
+               "is_literal" : "False"
+            }
+      ]
+    },{ 
+      "id" : "EOL Taxons 25",
+      "datasource_ids" : ["Taxons EOL Datasource 25"],
+      "subject" : "http://localhost:8080/taxons/eol/measure/326843",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://www.oeg.com/ontology#Measure",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#[lower(regexp_replace(escapeHtml4(stripAccents({.trait-pred})), '\\s+', '_'))]", 
+               "object" : "[trim(regexp_replace(regexp_replace(regexp_replace({.trait-val},'^<div[^>]+>',''),'<.*',''),'\\n\\s?',''))]",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2002/07/owl#someValuesFrom",
+               "object" : "https://eol.org/pages/326843",
+               "is_literal" : "False"
+            }
+      ]
+    },{ 
+      "id" : "EOL Taxons 26",
+      "datasource_ids" : ["Taxons EOL Datasource 26"],
+      "subject" : "http://localhost:8080/taxons/eol/measure/328611",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://www.oeg.com/ontology#Measure",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#[lower(regexp_replace(escapeHtml4(stripAccents({.trait-pred})), '\\s+', '_'))]", 
+               "object" : "[trim(regexp_replace(regexp_replace(regexp_replace({.trait-val},'^<div[^>]+>',''),'<.*',''),'\\n\\s?',''))]",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2002/07/owl#someValuesFrom",
+               "object" : "https://eol.org/pages/328611",
+               "is_literal" : "False"
+            }
+      ]
+    },{ 
+      "id" : "EOL Taxons 27",
+      "datasource_ids" : ["Taxons EOL Datasource 27"],
+      "subject" : "http://localhost:8080/taxons/eol/measure/289588",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://www.oeg.com/ontology#Measure",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#[lower(regexp_replace(escapeHtml4(stripAccents({.trait-pred})), '\\s+', '_'))]", 
+               "object" : "[trim(regexp_replace(regexp_replace(regexp_replace({.trait-val},'^<div[^>]+>',''),'<.*',''),'\\n\\s?',''))]",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2002/07/owl#someValuesFrom",
+               "object" : "https://eol.org/pages/289588",
+               "is_literal" : "False"
+            }
+      ]
+    },{ 
+      "id" : "EOL Taxons 28",
+      "datasource_ids" : ["Taxons EOL Datasource 28"],
+      "subject" : "http://localhost:8080/taxons/eol/measure/313989",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://www.oeg.com/ontology#Measure",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#[lower(regexp_replace(escapeHtml4(stripAccents({.trait-pred})), '\\s+', '_'))]", 
+               "object" : "[trim(regexp_replace(regexp_replace(regexp_replace({.trait-val},'^<div[^>]+>',''),'<.*',''),'\\n\\s?',''))]",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2002/07/owl#someValuesFrom",
+               "object" : "https://eol.org/pages/313989",
+               "is_literal" : "False"
+            }
+      ]
+    },{ 
+      "id" : "EOL Taxons 29",
+      "datasource_ids" : ["Taxons EOL Datasource 29"],
+      "subject" : "http://localhost:8080/taxons/eol/measure/327563",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://www.oeg.com/ontology#Measure",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#[lower(regexp_replace(escapeHtml4(stripAccents({.trait-pred})), '\\s+', '_'))]", 
+               "object" : "[trim(regexp_replace(regexp_replace(regexp_replace({.trait-val},'^<div[^>]+>',''),'<.*',''),'\\n\\s?',''))]",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2002/07/owl#someValuesFrom",
+               "object" : "https://eol.org/pages/327563",
+               "is_literal" : "False"
+            }
+      ]
+    },{ 
+      "id" : "EOL Taxons 30",
+      "datasource_ids" : ["Taxons EOL Datasource 30"],
+      "subject" : "http://localhost:8080/taxons/eol/measure/327564",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://www.oeg.com/ontology#Measure",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#[lower(regexp_replace(escapeHtml4(stripAccents({.trait-pred})), '\\s+', '_'))]", 
+               "object" : "[trim(regexp_replace(regexp_replace(regexp_replace({.trait-val},'^<div[^>]+>',''),'<.*',''),'\\n\\s?',''))]",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2002/07/owl#someValuesFrom",
+               "object" : "https://eol.org/pages/327564",
+               "is_literal" : "False"
+            }
+      ]
+    },{ 
+      "id" : "EOL Taxons 31",
+      "datasource_ids" : ["Taxons EOL Datasource 31"],
+      "subject" : "http://localhost:8080/taxons/eol/measure/328648",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://www.oeg.com/ontology#Measure",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#[lower(regexp_replace(escapeHtml4(stripAccents({.trait-pred})), '\\s+', '_'))]", 
+               "object" : "[trim(regexp_replace(regexp_replace(regexp_replace({.trait-val},'^<div[^>]+>',''),'<.*',''),'\\n\\s?',''))]",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2002/07/owl#someValuesFrom",
+               "object" : "https://eol.org/pages/328648",
+               "is_literal" : "False"
+            }
+      ]
+    },{ 
+      "id" : "EOL Taxons 32",
+      "datasource_ids" : ["Taxons EOL Datasource 32"],
+      "subject" : "http://localhost:8080/taxons/eol/measure/328598",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://www.oeg.com/ontology#Measure",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#[lower(regexp_replace(escapeHtml4(stripAccents({.trait-pred})), '\\s+', '_'))]", 
+               "object" : "[trim(regexp_replace(regexp_replace(regexp_replace({.trait-val},'^<div[^>]+>',''),'<.*',''),'\\n\\s?',''))]",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2002/07/owl#someValuesFrom",
+               "object" : "https://eol.org/pages/328598",
+               "is_literal" : "False"
+            }
+      ]
+    },{ 
+      "id" : "EOL Taxons 33",
+      "datasource_ids" : ["Taxons EOL Datasource 33"],
+      "subject" : "http://localhost:8080/taxons/eol/measure/323890",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://www.oeg.com/ontology#Measure",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#[lower(regexp_replace(escapeHtml4(stripAccents({.trait-pred})), '\\s+', '_'))]", 
+               "object" : "[trim(regexp_replace(regexp_replace(regexp_replace({.trait-val},'^<div[^>]+>',''),'<.*',''),'\\n\\s?',''))]",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2002/07/owl#someValuesFrom",
+               "object" : "https://eol.org/pages/323890",
+               "is_literal" : "False"
+            }
+      ]
+    },{ 
+      "id" : "EOL Taxons 34",
+      "datasource_ids" : ["Taxons EOL Datasource 34"],
+      "subject" : "http://localhost:8080/taxons/eol/measure/327553",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://www.oeg.com/ontology#Measure",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#[lower(regexp_replace(escapeHtml4(stripAccents({.trait-pred})), '\\s+', '_'))]", 
+               "object" : "[trim(regexp_replace(regexp_replace(regexp_replace({.trait-val},'^<div[^>]+>',''),'<.*',''),'\\n\\s?',''))]",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2002/07/owl#someValuesFrom",
+               "object" : "https://eol.org/pages/327553",
+               "is_literal" : "False"
+            }
+      ]
+    },{ 
+      "id" : "EOL Taxons 35",
+      "datasource_ids" : ["Taxons EOL Datasource 35"],
+      "subject" : "http://localhost:8080/taxons/eol/measure/328684",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://www.oeg.com/ontology#Measure",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#[lower(regexp_replace(escapeHtml4(stripAccents({.trait-pred})), '\\s+', '_'))]", 
+               "object" : "[trim(regexp_replace(regexp_replace(regexp_replace({.trait-val},'^<div[^>]+>',''),'<.*',''),'\\n\\s?',''))]",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2002/07/owl#someValuesFrom",
+               "object" : "https://eol.org/pages/328684",
+               "is_literal" : "False"
+            }
+      ]
+    },{ 
+      "id" : "EOL Taxons 36",
+      "datasource_ids" : ["Taxons EOL Datasource 36"],
+      "subject" : "http://localhost:8080/taxons/eol/measure/327645",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://www.oeg.com/ontology#Measure",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#[lower(regexp_replace(escapeHtml4(stripAccents({.trait-pred})), '\\s+', '_'))]", 
+               "object" : "[trim(regexp_replace(regexp_replace(regexp_replace({.trait-val},'^<div[^>]+>',''),'<.*',''),'\\n\\s?',''))]",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2002/07/owl#someValuesFrom",
+               "object" : "https://eol.org/pages/327645",
+               "is_literal" : "False"
+            }
+      ]
+    },{ 
+      "id" : "EOL Taxons 37",
+      "datasource_ids" : ["Taxons EOL Datasource 37"],
+      "subject" : "http://localhost:8080/taxons/eol/measure/327566",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://www.oeg.com/ontology#Measure",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#[lower(regexp_replace(escapeHtml4(stripAccents({.trait-pred})), '\\s+', '_'))]", 
+               "object" : "[trim(regexp_replace(regexp_replace(regexp_replace({.trait-val},'^<div[^>]+>',''),'<.*',''),'\\n\\s?',''))]",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2002/07/owl#someValuesFrom",
+               "object" : "https://eol.org/pages/327566",
+               "is_literal" : "False"
+            }
+      ]
+    },{ 
+      "id" : "EOL Taxons 38",
+      "datasource_ids" : ["Taxons EOL Datasource 38"],
+      "subject" : "http://localhost:8080/taxons/eol/measure/328032",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://www.oeg.com/ontology#Measure",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#[lower(regexp_replace(escapeHtml4(stripAccents({.trait-pred})), '\\s+', '_'))]", 
+               "object" : "[trim(regexp_replace(regexp_replace(regexp_replace({.trait-val},'^<div[^>]+>',''),'<.*',''),'\\n\\s?',''))]",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2002/07/owl#someValuesFrom",
+               "object" : "https://eol.org/pages/328032",
+               "is_literal" : "False"
+            }
+      ]
+    },{ 
+      "id" : "EOL Taxons 39",
+      "datasource_ids" : ["Taxons EOL Datasource 39"],
+      "subject" : "http://localhost:8080/taxons/eol/measure/327556",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://www.oeg.com/ontology#Measure",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#[lower(regexp_replace(escapeHtml4(stripAccents({.trait-pred})), '\\s+', '_'))]", 
+               "object" : "[trim(regexp_replace(regexp_replace(regexp_replace({.trait-val},'^<div[^>]+>',''),'<.*',''),'\\n\\s?',''))]",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2002/07/owl#someValuesFrom",
+               "object" : "https://eol.org/pages/327556",
+               "is_literal" : "False"
+            }
+      ]
+    },{ 
+      "id" : "EOL Taxons 42",
+      "datasource_ids" : ["Taxons EOL Datasource 42"],
+      "subject" : "http://localhost:8080/taxons/eol/measure/328593",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://www.oeg.com/ontology#Measure",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#[lower(regexp_replace(escapeHtml4(stripAccents({.trait-pred})), '\\s+', '_'))]", 
+               "object" : "[trim(regexp_replace(regexp_replace(regexp_replace({.trait-val},'^<div[^>]+>',''),'<.*',''),'\\n\\s?',''))]",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2002/07/owl#someValuesFrom",
+               "object" : "https://eol.org/pages/328593",
+               "is_literal" : "False"
+            }
+      ]
+    }
+  ]
+}

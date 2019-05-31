@@ -1,0 +1,100 @@
+{
+  "datasources" : [
+      {
+        "id" : "Table UPM Species",
+        "type" : "CsvDatasource",
+        "arguments" : [";"],
+        "refresh" : "22118400000",
+        "connector"  : {
+         "arguments" : ["./mappings/data/tabla-parametros.csv"],
+         "type" : "LocalFileConnector",
+        }
+      }
+  ],
+   "resource_rules" : [
+    { 
+      "id" : "UPM Species",
+      "datasource_ids" : ["Table UPM Species"],
+      "subject" : "http://localhost:8080/taxons/[lower(regexp_replace(escapeHtml4(stripAccents({ESPECIE})), '\\s+', '_'))]",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://dbpedia.org/ontology/Species",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#nombre_especie", 
+               "object" : "{ESPECIE}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#tamaño_adulto_g", 
+               "object" : "{TAMANO_ADULTO_g}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#tamaño_camada", 
+               "object" : "{TAMANO_DE_LA_CAMADA}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#camada_por_año", 
+               "object" : "{CAMADAS_POR_ANO}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#descendientes_por_año", 
+               "object" : "{N_DESCENDIENTES_POR_ANO}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#longevidad_max_meses", 
+               "object" : "{LONGEVIDAD_MAXIMA_(meses)}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#periodo_del_dia_de_actividad", 
+               "object" : "{PERIODO_DEL_DIA_DE_ACTIVIDAD}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#nivel_trofico", 
+               "object" : "{NIVEL_TROFICO}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#volador/terrestre", 
+               "object" : "{VOLADOR_O_TERRESTRE}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#distribucion_geografica_km2", 
+               "object" : "{DISTRIBUCION_GEOGRAFICA_A_NIVEL_GLOBAL_(Km2)}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#densidad_poblacion_km2", 
+               "object" : "{DENSIDAD_DE_POBLACION(n/km2)}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#group_size", 
+               "object" : "{GROUP_SIZE}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#heterocigosidad", 
+               "object" : "{HETEROCIGOSIDAD}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#diversidad_genetica", 
+               "object" : "{DIVERSIDAD_GENETICA}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#prevalencia_virus", 
+               "object" : "{PREVALENCIA_DEL_VIRUS}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#continentes", 
+               "object" : "{CONTINENTES}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#ecosistemas", 
+               "object" : "{ECOSISTEMAS}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.oeg.com/ontology#home_range_km2", 
+               "object" : "{HOME_RANGE_(km2)}",
+               "is_literal" : "True" 
+            }            
+      ]
+    }
+  ]
+}

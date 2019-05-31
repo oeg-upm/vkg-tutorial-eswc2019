@@ -1,0 +1,128 @@
+{
+  "datasources" : [
+      {
+        "id" : "STARS4ALL Alerts datasource",
+        "type" : "JsonDatasource",
+        "arguments" : ["$.[*]"],
+        "connector"  : {
+         "arguments" : ["http://tess-dashboards.stars4all.eu/api/alerts"],
+         "type" : "URLConnector",
+        }
+      }
+  ],
+   "resource_rules" : [
+    { 
+      "id" : "STARS4ALL Alerts",
+      "datasource_ids" : ["STARS4ALL Alerts datasource"],
+      "subject" : "http://localhost:8080/stars4all/alerts/{$.id}",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://stars4all.es/ontology#Alert",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://stars4all.es/ontology#id", 
+               "object" : "{$.id}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://stars4all.es/ontology#state", 
+               "object" : "{$.state}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://stars4all.es/ontology#message", 
+               "object" : "{$.message}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://stars4all.es/ontology#dashboardURL", 
+               "object" : "http://tess-dashboards.stars4all.eu{$.url}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://stars4all.es/ontology#executionError", 
+               "object" : "{$.executionError}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://stars4all.es/ontology#newStateDate", 
+               "object" : "{$.newStateDate}",
+               "is_literal" : "True" 
+            },{
+              "predicate" : "http://stars4all.es/ontology#referTo", 
+               "object" : "http://localhost:8080/stars4all/photometers/[trim(regexp_replace({$.name}, '-.*', ''))]",
+               "is_literal" : "False" 
+            },{
+              "predicate" : "http://schema.org/location", 
+               "object" : "http://localhost:8080/stars4all/locations/places/[lower(regexp_replace(trim(escapeHtml4(stripAccents(regexp_replace(regexp_replace({$.name}, '.*\\s+-', ''), ',.*', '')))), '\\s+', '_'))]",
+               "is_literal" : "False" 
+            },{
+              "predicate" : "http://stars4all.es/ontology#hasEvaluation", 
+               "object" : "http://localhost:8080/stars4all/alerts/{$.id}/evaluations/{$.evalDate}",
+               "is_literal" : "False" 
+            }
+      ]
+    }, { 
+      "id" : "STARS4ALL Alerts Places metadata",
+      "datasource_ids" : ["STARS4ALL Alerts datasource"],
+      "subject" : "http://localhost:8080/stars4all/locations/places/[lower(regexp_replace(trim(escapeHtml4(stripAccents(regexp_replace(regexp_replace({$.name}, '.*\\s+-', ''), ',.*', '')))), '\\s+', '_'))]",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://schema.org/Place",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://schema.org/name", 
+               "object" : "[trim(regexp_replace(regexp_replace({$.name}, '.*\\s+-', ''), ',.*', ''))]",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://schema.org/containedInPlace", 
+               "object" : "http://localhost:8080/stars4all/locations/countries/[lower(regexp_replace(trim(escapeHtml4(stripAccents(regexp_replace(regexp_replace({$.name}, '.*\\s+-', ''), '.*,', '')))), '\\s+', '_'))]",
+               "is_literal" : "False" 
+            },
+      ]
+    }, { 
+      "id" : "STARS4ALL Alerts Countries metadata",
+      "datasource_ids" : ["STARS4ALL Alerts datasource"],
+      "subject" : "http://localhost:8080/stars4all/locations/countries/[lower(regexp_replace(trim(escapeHtml4(stripAccents(regexp_replace(regexp_replace({$.name}, '.*\\s+-', ''), '.*,', '')))), '\\s+', '_'))]",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://schema.org/Country",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://schema.org/name", 
+               "object" : "[trim(regexp_replace(regexp_replace({$.name}, '.*\\s+-', ''), '.*,', ''))]",
+               "is_literal" : "True" 
+            }
+      ]
+    }, { 
+      "id" : "STARS4ALL Alerts Evaluations metadata",
+      "datasource_ids" : ["STARS4ALL Alerts datasource"],
+      "subject" : "http://localhost:8080/stars4all/alerts/{$.id}/evaluations/{$.evalDate}",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://stars4all.es/ontology#Evaluation",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://stars4all.es/ontology#dateTime", 
+               "object" : "{$.evalDate}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://stars4all.es/ontology#noData", 
+               "object" : "{$.evalData.noData}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://stars4all.es/ontology#evalDataMetric", 
+               "object" : "{$.evalData.evalMatches.metric}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://stars4all.es/ontology#evalDataTags", 
+               "object" : "{$.evalData.evalMatches.tags}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://stars4all.es/ontology#evalDataValue", 
+               "object" : "{$.evalData.evalMatches.value}",
+               "is_literal" : "True" 
+            }
+      ]
+    }
+  ]
+}

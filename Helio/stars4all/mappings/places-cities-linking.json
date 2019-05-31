@@ -1,0 +1,12 @@
+{ 
+  "relationships": [
+    { 
+      "condition" : "levenshtein(lower(regexp_replace(trim(escapeHtml4(stripAccents(regexp_replace(regexp_replace(S({$.name}), '.*\\s+-', ''), ',.*', '')))), '\\s+', '_')), lower(regexp_replace(escapeHtml4(stripAccents(T({$.city}))), '\\s+', '_'))) < 3",
+      "predicates" : ["http://www.w3.org/2002/07/owl#sameAs"],
+      "inverse_predicates" : ["http://www.w3.org/2002/07/owl#sameAs"],
+      "source_resource_rule_id" : "STARS4ALL Alerts Cities metadata",
+      "target_resource_rule_id" : "STARS4ALL Cities metadata"
+    }
+  ]
+}
+

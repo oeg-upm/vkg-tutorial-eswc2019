@@ -1,0 +1,76 @@
+{
+  "datasources" : [
+      {
+        "id" : "STARS4ALL Real-Time Values datasource",
+        "type" : "JsonDatasource",
+        "arguments" : ["$.[*]"],
+        "connector"  : {
+         "arguments" : ["http://api.stars4all.eu/reports/instant_values"],
+         "type" : "URLConnector",
+        }
+      }
+  ],
+   "resource_rules" : [
+    { 
+      "id" : "STARS4ALL Real-Time Photometers",
+      "datasource_ids" : ["STARS4ALL Real-Time Values datasource"],
+      "subject" : "http://localhost:8080/stars4all/photometers/{$.name}",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "https://w3id.org/def/saref4envi#Photometer",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://www.w3.org/ns/sosa/Sensor",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "https://w3id.org/saref#measuresProperty", 
+               "object" : "https://w3id.org/def/saref4envi#LightMagnitude",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "https://w3id.org/saref#hasName", 
+               "object" : "{$.name}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "https://w3id.org/saref#makesMeasurement", 
+               "object" : "http://localhost:8080/stars4all/photometers/{$.name}/mag",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.w3.org/2000/01/rdf-schema#label", 
+               "object" : "Id: {$.['_id']}",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://www.w3.org/ns/sosa/Sensor",
+               "is_literal" : "False" 
+            }
+      ]
+    },{ 
+      "id" : "STARS4ALL Real-Time Values",
+      "datasource_ids" : ["STARS4ALL Real-Time Values datasource"],
+      "subject" : "http://localhost:8080/stars4all/photometers/{$.name}/mag",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "https://w3id.org/saref#Measurement",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "https://w3id.org/saref#relatesToProperty", 
+               "object" : "https://w3id.org/def/saref4envi#LightMagnitude",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "https://w3id.org/saref#hasValue", 
+               "object" : "{$.mag}",
+               "datatype" : "http://www.w3.org/2001/XMLSchema#float",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "https://w3id.org/saref#hasTimeStamp", 
+               "object" : "{$.tstamp}",
+               "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+               "is_literal" : "True" 
+            }
+      ]
+    }
+  ]
+}

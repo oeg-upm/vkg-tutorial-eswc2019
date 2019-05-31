@@ -1,0 +1,1 @@
+java -Djava.security.egd=file:/dev/./urandom -jar Helio-1.0.0.jar --server.port=8080 --server.mappings=mappings --logging.file=./helio-log.txt

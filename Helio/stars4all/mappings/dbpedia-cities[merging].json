@@ -1,0 +1,150 @@
+{ 
+  "datasources" : [
+      {
+        "id" : "Cities & Countries DBpedia Datasource",
+        "type" : "JsonDatasource",
+        "refresh" : "2630000000",
+        "arguments" : ["$.results.bindings.[*]"],
+        "connector"  : {
+          "arguments" : ["https://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=SELECT+DISTINCT+*+WHERE+%7B%0D%0A++++++++%3Fcity+a+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2FCity%3E+.%0D%0A++++++++%3Fcity+rdfs%3Alabel+%3FcityName+.%0D%0A++++++++FILTER+%28+lang%28%3FcityName%29+%3D+%22es%22+%29+.%0D%0A++++++++%3Fcity+geo%3Alat+%3Flatitute+.%0D%0A++++++++%3Fcity+geo%3Along+%3Flong+.%0D%0A++++++++%3Fcity+dbo%3ApopulationTotal+%3Fpopulation+.%0D%0A++++++++%3Fcity+dbo%3Aelevation+%3Felevation+.%0D%0A++++++++%3Fcity+dbo%3Acountry+%3Fcountry+.%0D%0A++++++++%3Fcountry+rdfs%3Alabel+%3FcountryName+.%0D%0A++++++++FILTER+%28+lang%28%3FcountryName%29+%3D+%22es%22+%29+.%0D%0A++++++++%3Fcountry+geo%3Alat+%3FcountryLat+.%0D%0A++++++++%3Fcountry+geo%3Along+%3FcountryLong+.+%0D%0A++++++++OPTIONAL+%7B+%3Fcountry+dbp%3AgdpNominal+%3FgdpNominal+.%7D+%0D%0A++++++++OPTIONAL+%7B+%3Fcountry+dbp%3AgdpNominalPerCapita+%3FgdpNominalPerCapita+.+%7D+%0D%0A++++++++OPTIONAL+%7B+%3Fcountry+dbo%3ApopulationDensity+%3FcountryPopulationDensity+.+%7D+%0D%0A++++++++OPTIONAL+%7B+%3Fcountry+dbo%3AtimeZone+%3FcountryTimezone+.+%7D+%0D%0A+++++++%0D%0A+%0D%0A%7D&format=application%2Fsparql-results%2Bjson&CXML_redir_for_subjs=121&CXML_redir_for_hrefs=&timeout=30000&debug=on&run=+Run+Query+"],
+          "type" : "URLConnector",
+        }
+      },{
+        "id" : "Cities OF EU in DBpedia",
+        "type" : "JsonDatasource",
+        "refresh" : "2630000000",
+        "arguments" : ["$.results.bindings.[*]"],
+        "connector"  : {
+          "arguments" : ["https://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=select+distinct+%3FcountryName+where+%7B%0D%0A+++%3Fcountry+%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2Fsubject%3E+%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2FCategory%3ACountries_in_Europe%3E+.%0D%0A+++%3Fcountry+rdfs%3Alabel+%3FcountryName+.%0D%0A+++FILTER+%28+lang%28%3FcountryName%29+%3D+%22es%22%29+.%0D%0A+++FILTER+%28+str%28%3FcountryName%29+%21%3D+%22%27%27%22%29+.%0D%0A+++FILTER+%28+%21contains%28%3FcountryName%2C%22%25%22%29+%29.%0D%0A%7D+&format=application%2Fsparql-results%2Bjson&CXML_redir_for_subjs=121&CXML_redir_for_hrefs=&timeout=30000&debug=on&run=+Run+Query+"],
+          "type" : "URLConnector",
+        }
+      } 
+  ],
+  "resource_rules" : [
+    { 
+     "id" : "Cities DBpedia",
+     "datasource_ids" : ["Cities & Countries DBpedia Datasource"],
+     "subject" : "http://localhost:8080/stars4all/locations/cities/[lower(regexp_replace(regexp_replace(escapeHtml4(stripAccents({$.cityName.value})), '\\s+', '_'),'\\(.*',''))]",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://schema.org/City",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://dbpedia.org/ontology/City",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://schema.org/name", 
+               "object" : "{$.cityName.value}",
+               "lang" : "es",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2003/01/geo/wgs84_pos#long", 
+               "object" : "{$.long.value}",
+               "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2003/01/geo/wgs84_pos#lat", 
+               "object" : "{$.latitute.value}",
+               "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://dbpedia.org/ontology/populationTotal", 
+               "object" : "{$.population.value}",
+               "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://dbpedia.org/ontology/elevation", 
+               "object" : "{$.elevation.value}",
+               "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://schema.org/containedInPlace", 
+               "object" : "http://localhost:8080/stars4all/locations/countries/[lower(regexp_replace(regexp_replace(escapeHtml4(stripAccents({$.countryName.value})), '\\s+', '_'),'\\(.*',''))]",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.w3.org/2002/07/owl#someValuesFrom", 
+               "object" : "{$.city.value}",
+               "is_literal" : "False" 
+        }
+      ]
+    },{ 
+      "id" : "Countries DBpedia",
+      "datasource_ids" : ["Cities & Countries DBpedia Datasource"],
+      "subject" : "http://localhost:8080/stars4all/locations/countries/[lower(regexp_replace(regexp_replace(escapeHtml4(stripAccents({$.countryName.value})), '\\s+', '_'),'\\(.*',''))]",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://schema.org/Country",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://www.wikidata.org/entity/Q6256",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://schema.org/name", 
+               "object" : "{$.countryName.value}",
+               "lang" : "es",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2003/01/geo/wgs84_pos#long", 
+               "object" : "{$.countryLong.value}",
+               "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2003/01/geo/wgs84_pos#lat", 
+               "object" : "{$.countryLat.value}",
+               "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://dbpedia.org/ontology/populationTotal", 
+               "object" : "{$.countryPopulationDensity.value}",
+               "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://dbpedia.org/property/gdpNominal", 
+               "object" : "{$.gdpNominal.value}",
+               "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://dbpedia.org/property/gdpNominalPerCapita", 
+               "object" : "{$.gdpNominalPerCapita.value}",
+               "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://schema.org/containsPlace", 
+               "object" : "http://localhost:8080/stars4all/locations/cities/[lower(regexp_replace(regexp_replace(escapeHtml4(stripAccents({$.cityName.value})), '\\s+', '_'),'\\(.*',''))]",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.w3.org/2002/07/owl#someValuesFrom", 
+               "object" : "{$.country.value}",
+               "is_literal" : "False" 
+            }
+      ]
+    },{ 
+      "id" : "Countries of EU DBpedia",
+      "datasource_ids" : ["Cities OF EU in DBpedia"],
+      "subject" : "http://localhost:8080/stars4all/locations/countries/organizations/european_union",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://schema.org/Organization",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://schema.org/name", 
+               "object" : "European Union",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2002/07/owl#someValuesFrom", 
+               "object" : "http://dbpedia.org/resource/Category:Countries_in_Europe",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://schema.org/member", 
+               "object" : "http://localhost:8080/stars4all/locations/countries/[lower(regexp_replace(regexp_replace(escapeHtml4(stripAccents({$.countryName.value})), '\\s+', '_'),'\\(.*',''))]",
+               "is_literal" : "False" 
+            }
+      ]
+    }
+  ]
+}

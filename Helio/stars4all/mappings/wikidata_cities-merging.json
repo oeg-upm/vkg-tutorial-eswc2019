@@ -1,0 +1,160 @@
+{ 
+  "datasources" : [
+      {
+        "id" : "Cities Wikidata Datasource",
+        "type" : "JsonDatasource",
+        "arguments" : ["$.results.bindings.[*]"],
+        "refresh" : "2630000000",
+        "connector"  : {
+          "arguments" : ["https://query.wikidata.org/sparql?query=PREFIX%20wd%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fentity%2F%3E%0APREFIX%20wds%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fentity%2Fstatement%2F%3E%0APREFIX%20wdv%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fvalue%2F%3E%0APREFIX%20wdt%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fdirect%2F%3E%0APREFIX%20wikibase%3A%20%3Chttp%3A%2F%2Fwikiba.se%2Fontology%23%3E%0APREFIX%20p%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2F%3E%0APREFIX%20ps%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fstatement%2F%3E%0APREFIX%20pq%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2F%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX%20bd%3A%20%3Chttp%3A%2F%2Fwww.bigdata.com%2Frdf%23%3E%0APREFIX%20foaf%3A%20%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0APREFIX%20owl%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%20%0APREFIX%20rdf%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0APREFIX%20geo%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2003%2F01%2Fgeo%2Fwgs84_pos%23%3E%20%0APREFIX%20dbo%3A%20%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E%20%0APREFIX%20dbp%3A%20%3Chttp%3A%2F%2Fdbpedia.org%2Fproperty%2F%3E%20%0A%0ASELECT%20DISTINCT%20*%20WHERE%20%7B%20%0A%09%09%3Fcity%20wdt%3AP31%20wd%3AQ515.%0A%09%20%20%20%20%3Fcity%20rdfs%3Alabel%20%3FcityName%20.%0A%09%20%20%20%20FILTER%20(lang(%3FcityName)%20%3D%20'es')%0A%0A%09%20%20%20%20%3Fcity%20wdt%3AP625%20%3FcityGeolocation%20.%0A%09%20%20%20%20BIND(%20REPLACE(SUBSTR(str(%3FcityGeolocation)%2C7)%2C%20%22%5C%5C)%22%2C%20%22%22)%20%20AS%20%3FcityProcessedCoordinates%20)%0A%09%20%20%20%20BIND(%20strbefore(%3FcityProcessedCoordinates%2C%20%22%20%22)%20AS%20%3FcityLongitud%20)%0A%09%20%20%20%20BIND(%20strafter(%3FcityProcessedCoordinates%2C%20%22%20%22)%20AS%20%3FcityLatitude%20)%0A%09%20%20%0A%09%20%20%20%20%3Fcity%20wdt%3AP1082%20%3FcityPopulation.%0A%09%09%3Fcity%20wdt%3AP2044%20%3FelevationOverSea.%0A%09%09%3Fcity%20wdt%3AP402%20%3FOpenStreetMapID.%20%0A%09%20%20%20%20%20%20%0A%09%20%20%20%20%3Fcity%20wdt%3AP17%20%3Fcountry%20.%0A%09%20%20%20%20%3Fcountry%20rdfs%3Alabel%20%3FcountryName%20.%0A%09%20%20%20%20FILTER%20(lang(%3FcountryName)%20%3D%20'es')%0A%09%20%20%20%20%3Fcountry%20wdt%3AP625%20%3FcountryGeolocation%20.%0A%09%20%20%20%20BIND(%20REPLACE(SUBSTR(str(%3FcountryGeolocation)%2C7)%2C%20%22%5C%5C)%22%2C%20%22%22)%20%20AS%20%3FcountryProcessedCoordinates%20)%0A%09%20%20%20%20BIND(%20strbefore(%3FcountryProcessedCoordinates%2C%20%22%20%22)%20AS%20%3FcountryLongitud%20)%0A%09%20%20%20%20BIND(%20strafter(%3FcountryProcessedCoordinates%2C%20%22%20%22)%20AS%20%3FcountryLatitude%20)%0A%09%20%20%20%20OPTIONAL%20%7B%20%3Fcountry%20wdt%3AP1082%20%3FcountryPopulation%20.%7D%0A%09%20%20%20%20OPTIONAL%20%7B%20%3Fcountry%20wdt%3AP2131%20%3FnominalGDP%20.%7D%0A%09%20%20%20%20OPTIONAL%20%7B%20%3Fcountry%20wdt%3AP2132%20%3FnominalGDPPerCapita%20.%7D%0A%09%20%20%0A%7D%20%0A%0A&format=json"],
+          "type" : "URLConnector",
+        }
+      },{
+        "id" : "Organizations Wikidata Datasource",
+        "type" : "JsonDatasource",
+        "arguments" : ["$.results.bindings.[*]"],
+        "refresh" : "2630000000",
+        "connector"  : {
+          "arguments" : ["https://query.wikidata.org/sparql?query=SELECT%20%3FcountryName%20%7B%0A%20%20%20%20wd%3AQ458%20wdt%3AP150%20%3Fcountry%20.%20%0A%20%20%20%20%3Fcountry%20rdfs%3Alabel%20%3FcountryName%20%0A%20%20%20%20%20FILTER%20(%20lang(%3FcountryName)%20%3D%20%22es%22%20%20)%20.%0A%7D&format=json"],
+          "type" : "URLConnector",
+        }
+      }  
+  ],
+  "resource_rules" : [
+    { 
+     "id" : "Cities Wikidata",
+     "datasource_ids" : ["Cities Wikidata Datasource"],
+     "subject" : "http://localhost:8080/stars4all/locations/cities/[lower(regexp_replace(escapeHtml4(stripAccents({$.cityName.value})), '\\s+', '_'))]",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://schema.org/City",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://www.wikidata.org/entity/Q515",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://schema.org/name", 
+               "object" : "{$.cityName.value}",
+               "lang" : "en",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2003/01/geo/wgs84_pos#long", 
+               "object" : "{$.cityLongitud.value}",
+               "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2003/01/geo/wgs84_pos#lat", 
+               "object" : "{$.cityLatitude.value}",
+               "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://dbpedia.org/ontology/populationTotal", 
+               "object" : "{$.cityPopulation.value}",
+               "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://dbpedia.org/ontology/elevation", 
+               "object" : "{$.elevationOverSea.value}",
+               "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://dbpedia.org/ontology/OpenStreetMapID", 
+               "object" : "{$.OpenStreetMapID.value}",
+               "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://schema.org/containedInPlace", 
+               "object" : "http://localhost:8080/stars4all/locations/countries/[lower(regexp_replace(escapeHtml4(stripAccents({$.countryName.value})), '\\s+', '_'))]",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.w3.org/2002/07/owl#someValuesFrom", 
+               "object" : "{$.city.value}",
+               "is_literal" : "False" 
+        }
+      ]
+    },{ 
+      "id" : "Countries Wikidata",
+      "datasource_ids" : ["Cities Wikidata Datasource"],
+      "subject" : "http://localhost:8080/stars4all/locations/countries/[lower(regexp_replace(escapeHtml4(stripAccents({$.countryName.value})), '\\s+', '_'))]",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://schema.org/Country",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://www.wikidata.org/entity/Q6256",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://schema.org/name", 
+               "object" : "{$.countryName.value}",
+               "lang" : "en",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2003/01/geo/wgs84_pos#long", 
+               "object" : "{$.countryLongitud.value}",
+               "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2003/01/geo/wgs84_pos#lat", 
+               "object" : "{$.countryLatitude.value}",
+               "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://dbpedia.org/ontology/populationTotal", 
+               "object" : "{$.countryPopulation.value}",
+               "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://dbpedia.org/property/gdpNominal", 
+               "object" : "{$.nominalGDP.value}",
+               "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://dbpedia.org/property/gdpNominalPerCapita", 
+               "object" : "{$.nominalGDPPerCapita.value}",
+               "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://schema.org/containsPlace", 
+               "object" : "http://localhost:8080/stars4all/locations/cities/[lower(regexp_replace(escapeHtml4(stripAccents({$.cityName.value})), '\\s+', '_'))]",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://www.w3.org/2002/07/owl#someValuesFrom", 
+               "object" : "{$.country.value}",
+               "is_literal" : "False" 
+            }
+      ]
+    },{ 
+     "id" : "Organizations Wikidata",
+     "datasource_ids" : ["Organizations Wikidata Datasource"],
+     "subject" : "http://localhost:8080/stars4all/locations/countries/organizations/european_union",
+      "properties"  : [
+            {
+               "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+               "object" : "http://schema.org/Organization",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://schema.org/name", 
+               "object" : "European Union",
+               "lang" : "en",
+               "is_literal" : "True" 
+            },{
+               "predicate" : "http://www.w3.org/2002/07/owl#someValuesFrom", 
+               "object" : "https://www.wikidata.org/wiki/Q458",
+               "is_literal" : "False" 
+            },{
+               "predicate" : "http://schema.org/member", 
+               "object" : "http://localhost:8080/stars4all/locations/countries/[lower(regexp_replace(escapeHtml4(stripAccents({$.countryName.value})), '\\s+', '_'))]",
+               "lang" : "en",
+               "is_literal" : "False" 
+            }
+
+
+
+      ]
+    }
+  ] 
+}

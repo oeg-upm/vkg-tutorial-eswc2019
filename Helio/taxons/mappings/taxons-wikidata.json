@@ -1,0 +1,60 @@
+{
+  "datasources" : [
+      {
+        "id" : "Wikidata Taxons Datasource",
+        "type" : "JsonDatasource",
+        "refresh" : "86400000",
+        "arguments" : ["$.results.bindings.[*]"],
+        "connector"  : {
+         "arguments" : ["https://query.wikidata.org/sparql?query=SELECT%20%3Ftaxon%20%3Ftaxon_name%20%3Fimagen%20%3Fperiodo_de_gestaci_n%20%3Fmapa_de_distribuci_n_de_un_tax_n%20%3Fidentificador_ITIS%20%3Fidentificador_NCBI%20%3Fidentificador_EOL%20WHERE%20%7B%0A%20%20%3Ftaxon%20wdt%3AP31%20wd%3AQ16521.%0A%20%20%3Ftaxon%20rdfs%3Alabel%20%3Ftaxon_name.%0A%20%20VALUES%20(%3Ftaxon_name)%20%7B%0A%20%20%20%20(%22Alopex%20lagopus%22%40es)%0A%20%20%20%20(%22Artibeus%20lituratus%22%40es)%0A%20%20%20%20(%22Axis%20axis%22%40es)%0A%20%20%20%20(%22Bison%20bison%22%40es)%0A%20%20%20%20(%22Bos%20taurus%22%40es)%0A%20%20%20%20(%22Callithrix%20jacchus%22%40es)%0A%20%20%20%20(%22Camelus%20dromedarius%22%40es)%0A%20%20%20%20(%22Canis%20latrans%22%40es)%0A%20%20%20%20(%22Canis%20lupus%20familiaris%22%40es)%0A%20%20%20%20(%22Canis%20lupus%22%40es)%0A%20%20%20%20(%22Canis%20mesomelas%22%40es)%0A%20%20%20%20(%22Capra%20aegagrus%20hircus%22%40es)%0A%20%20%20%20(%22Cerdocyon%20thous%22%40es)%0A%20%20%20%20(%22Civettictis%20civetta%22%40es)%0A%20%20%20%20(%22Cynictis%20penicillata%22%40es)%0A%20%20%20%20(%22Desmodus%20rotundus%22%40es)%0A%20%20%20%20(%22Eptesicus%20furinalis%22%40es)%0A%20%20%20%20(%22Eptesicus%20fuscus%22%40es)%0A%20%20%20%20(%22Equus%20caballus%22%40es)%0A%20%20%20%20(%22Felis%20catus%22%40es)%0A%20%20%20%20(%22Homo%20sapiens%22%40es)%0A%20%20%20%20(%22Lasionycteris%20noctivagans%22%40es)%0A%20%20%20%20(%22Lasiurus%20borealis%22%40es)%0A%20%20%20%20(%22Lasiurus%20cinereus%22%40es)%0A%20%20%20%20(%22Lasiurus%20ega%22%40es)%0A%20%20%20%20(%22Lasiurus%20intermedius%22%40es)%0A%20%20%20%20(%22Lasiurus%20seminolus%22%40es)%0A%20%20%20%20(%22Melogale%20moschata%22%40es)%0A%20%20%20%20(%22Mephitis%20mephitis%22%40es)%0A%20%20%20%20(%22Molossus%20molossus%22%40es)%0A%20%20%20%20(%22Myotis%20californicus%22%40es)%0A%20%20%20%20(%22Myotis%20evotis%22%40es)%0A%20%20%20%20(%22Myotis%20lucifugus%22%40es)%0A%20%20%20%20(%22Myotis%20nigricans%22%40es)%0A%20%20%20%20(%22Myotis%20yumanensis%22%40es)%0A%20%20%20%20(%22Nyctereutes%20procyonoides%22%40es)%0A%20%20%20%20(%22Nyctinomops%20laticaudatus%22%40es)%0A%20%20%20%20(%22Otocyon%20megalotis%22%40es)%0A%20%20%20%20(%22Ovis%20aries%22%40es)%0A%20%20%20%20(%22Pipistrellus%20hesperus%22%40es)%0A%20%20%20%20(%22Pipistrellus%20subflavus%22%40es)%0A%20%20%20%20(%22Procyon%20lotor%22%40es)%0A%20%20%20%20(%22Rangifer%20tarandus%22%40es)%0A%20%20%20%20(%22Sus%20scrofa%22%40es)%0A%20%20%20%20(%22Tadarida%20brasiliensis%22%40es)%0A%20%20%20%20(%22Tragelaphus%20strepsiceros%22%40es)%0A%20%20%20%20(%22Urocyon%20cinereoargenteus%22%40es)%0A%20%20%20%20(%22Vulpes%20vulpes%22%40es)%0A%20%20%7D%0A%20%20OPTIONAL%20%7B%20%3Ftaxon%20wdt%3AP18%20%3Fimagen.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Ftaxon%20wdt%3AP3063%20%3Fperiodo_de_gestaci_n.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Ftaxon%20wdt%3AP181%20%3Fmapa_de_distribuci_n_de_un_tax_n.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Ftaxon%20wdt%3AP815%20%3Fidentificador_ITIS.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Ftaxon%20wdt%3AP685%20%3Fidentificador_NCBI.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Ftaxon%20wdt%3AP830%20%3Fidentificador_EOL.%20%7D%0A%7D%0A&format=json"],
+         "type" : "URLConnector",
+        }
+      }
+  ],
+   "resource_rules" : [
+      { 
+        "id" : "Wikidata Taxons",
+        "datasource_ids" : ["Wikidata Taxons Datasource"],
+        "subject" : "http://localhost:8080/taxons/[lower(regexp_replace(escapeHtml4(stripAccents({$.taxon_name.value})), '\\s+', '_'))]",
+        "properties"  : [
+              {
+                 "predicate" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
+                 "object" : "https://www.wikidata.org/wiki/Q16521",
+                 "is_literal" : "False" 
+              },{
+                 "predicate" : "http://xmlns.com/foaf/0.1/Image", 
+                 "object" : "{$.image.value}",
+                 "is_literal" : "False" 
+              },{
+                 "predicate" : "http://www.oeg.com/ontology#gestation_period", 
+                 "object" : "{$.periodo_de_gestaci_n.value}",
+                 "is_literal" : "True" 
+              },{
+                 "predicate" : "http://purl.org/ontology/wo/distributionMap", 
+                 "object" : "{$.mapa_de_distribuci_n_de_un_tax_n.value}",
+                 "is_literal" : "False" 
+              },{
+                 "predicate" : "http://www.w3.org/2002/07/owl#sameAs", 
+                 "object" : "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value={$.identificador_ITIS.value}",
+                 "is_literal" : "False" 
+              },{
+                 "predicate" : "http://www.w3.org/2002/07/owl#sameAs", 
+                 "object" : "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id={$.identificador_NCBI.value}",
+                 "is_literal" : "False" 
+              },{
+                 "predicate" : "http://www.w3.org/2002/07/owl#sameAs", 
+                 "object" : "https://eol.org/pages/{$.identificador_EOL.value}",
+                 "is_literal" : "False" 
+              },{
+                 "predicate" : "http://www.w3.org/2002/07/owl#someValuesFrom", 
+                 "object" : "{$.taxon.value}",
+                 "is_literal" : "False" 
+              },{
+                 "predicate" : "http://www.oeg.com/ontology#hasMeasure", 
+                 "object" : "http://localhost:8080/taxons/eol/measure/{$.identificador_EOL.value}",
+                 "is_literal" : "False" 
+              }
+        ]
+      }
+    ]
+}
